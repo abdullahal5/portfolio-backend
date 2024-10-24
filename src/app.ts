@@ -1,10 +1,28 @@
-import express, { Request, Response } from "express";
-const app = express();
+import express, { Application, Request, Response } from "express";
+import cors from "cors";
+import cookieParser from "cookie-parser";
+import globalErrorHandler from "./middlewares/globalErrorHandler";
+import notFound from "./middlewares/notFound";
+
+const app: Application = express();
+
+app.use(
+  cors({
+    origin: ["http://localhost:5173", "http://localhost:3000"],
+    credentials: true,
+  })
+);
+
+app.use(express.json());
+app.use(cookieParser());
+
+// app.use("/api/v1", router);
 
 app.get("/", (req: Request, res: Response) => {
-  const a = "Welcome next level developers";
-
-  res.send(a);
+  res.send("Hello Next Level Developers 👋!!!");
 });
+
+app.use(globalErrorHandler);
+app.use(notFound);
 
 export default app;

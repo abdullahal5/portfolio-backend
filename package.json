@@ -1,5 +1,5 @@
 {
-  "name": "Portfolio-backend",
+  "name": "ts-nodejs-backend-initial",
   "version": "1.0.0",
   "main": "./dist/server.ts",
   "scripts": {

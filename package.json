@@ -1,5 +1,5 @@
 {
-  "name": "ts-server-template",
+  "name": "ts-nodejs-backend-initial",
   "version": "1.0.0",
   "main": "./dist/server.ts",
   "scripts": {
@@ -19,11 +19,15 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
-    "mongoose": "^8.4.0"
+    "http-status": "^2.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.4.0",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@eslint/js": "^9.3.0",
     "@types/express": "^4.17.21",
+    "@types/http-status": "^0.2.30",
     "@types/node": "^20.12.12",
     "@typescript-eslint/eslint-plugin": "^7.9.0",
     "@typescript-eslint/parser": "^7.9.0",

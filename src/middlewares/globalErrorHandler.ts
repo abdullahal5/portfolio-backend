@@ -7,7 +7,7 @@ import handleDuplicateError from "../errors/handleDuplicateError";
 import handleZodError from "../errors/handleZodError";
 import handleValidationError from "../errors/handleValidationError";
 import AppError from "../errors/AppError";
-import config from "../app/config";
+import config from "../config";
 
 const globalErrorHandler: ErrorRequestHandler = (err, req, res, next) => {
   let statusCode = err?.statusCode || 500;
